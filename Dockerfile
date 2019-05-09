@@ -12,6 +12,7 @@ RUN  adduser  msama &&\
   rm -rf /var/cache/apk/*
 WORKDIR /app/msama
 COPY search_movie.sh /app/msama
-#RUN /shell-script.sh
+RUN  chmod -R 0777 /app/msama &&\
+  chown -R msama:msama /app/msama 
 USER msama
 ENTRYPOINT ["/bin/bash"]
