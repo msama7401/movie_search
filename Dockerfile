@@ -2,11 +2,10 @@ FROM ubuntu
 
 USER root
 WORKDIR /app
-RUN addgroup -S msama &&\
-  adduser -S msama -G msama &&\
+RUN  adduser  msama &&\
   apt update -y && \
   apt upgrade -y && \
-  apt -y install gridsite-clients && \
+  apt -y install gridsite-clients curl python && \
   mkdir msama &&\
   chown -R msama:msama msama &&\
   chmod -R 0777 msama &&\
