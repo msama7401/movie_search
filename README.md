@@ -20,4 +20,5 @@ $ docker run -it movie-search
 # The container connect you to the image to the shell scipt location; Run the following:
 
 $ source search_movie.sh
-$ moviesearch <movieName> 
+
+$ moviesearch < movieName > 
