@@ -1,6 +1,6 @@
 New Changes:
 # Created a function moviesearch that uses getapidata function to get the data from api call and the readconfig to maintain the configurations (here used the secret)
-# We can set path to the secret in /etc for users with no read access.
+# We can set path to the secret in /etc for users with no read access.Checked-in the secretapi to the current location for reference.
 
 
  
