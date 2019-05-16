@@ -2,7 +2,7 @@ FROM ubuntu
 
 USER root
 WORKDIR /app
-RUN  adduser  msama &&\
+RUN  useradd  msama &&\
   apt update -y && \
   apt upgrade -y && \
   apt -y install gridsite-clients curl python && \
@@ -12,5 +12,6 @@ RUN  adduser  msama &&\
   rm -rf /var/cache/apk/*
 WORKDIR /app/msama
 COPY search_movie.sh /app/msama
-RUN  chmod -R 0777 /app/msama &&\
-  chown -R msama:msama /app/msama 
+COPY secret.api /app/msama
+RUN chmod -R 0777 /app/msama &&\
+  chown -R msama:msama /app/msama

@@ -1,3 +1,9 @@
+New Changes:
+# Created a function moviesearch that uses getapidata function to get the data from api call and the readconfig to maintain the configurations (here used the secret)
+# We can set path to the secret in /etc for users with no read access.
+
+
+ 
 # Search for movie rating
 # Clone the repo from github
 
@@ -13,4 +19,5 @@ $ docker run -it movie-search
 
 # The container connect you to the image to the shell scipt location; Run the following:
 
-$ ./search_movie.sh <movieName> 
+$ source search_movie.sh
+$ moviesearch <movieName> 
