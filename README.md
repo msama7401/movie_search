@@ -21,4 +21,4 @@ $ docker run -it movie-search
 
 $ source search_movie.sh
 
-$ moviesearch <movieName> 
+$ moviesearch < movieName > 
